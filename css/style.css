@@ -1,0 +1,800 @@
+body {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(120deg, #fff 75%, #9fd311 25%);
+	font-family: 'PT Sans', sans-serif;
+}
+
+
+/*====================Style for navigation======================*/
+.navigation {
+	z-index: 20;
+	width: 100%;
+	top: 3%;
+	position: absolute;
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	width: 25%;
+	display: flex;
+	align-items: center;
+}
+
+.logotype {
+	max-width: 60px;
+	margin-left: 50%;
+}
+
+.nav-menu {
+	width: 20%;
+}
+
+.menu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	width: 300%;
+}
+
+.nav-item {
+	padding: 0 10px;
+}
+
+.nav-link {
+	text-decoration: none;
+	color: #9fd311;
+	font-size: 16px;
+	border-bottom: 2px solid transparent;
+	transition: .3s;
+	font-weight: bold;
+}
+
+.nav-link:hover {
+	border-bottom: 2px solid #9fd311;
+}
+
+.search-block {
+	width: 40%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.searsh {
+	display: flex;
+	background-color: #fff;
+	border: 2px solid #9fd311;
+	border-radius: 30px;
+	width: 50%;
+	z-index: 1;
+}
+
+.search-form {
+	padding-left: 5%;
+	width: 90%;
+	height: 25px;
+	z-index: 10;
+	border-radius: 30px;
+	border: none;
+	outline: none;
+	font-weight: bold;
+	color: #6f6f6f;
+}
+
+.search-btn {
+	color: #9fd311;
+	font-size: 17px;
+	width: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+}
+
+.personal-item {
+	width: 15%;
+}
+
+.auth {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 500%;
+}
+
+.auth-link {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #9fd311;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 16px;
+	transition: .3s;
+}
+
+.auth-link i {
+	padding: 0 5px;
+	font-size: 20px;
+	color: #9fd311;
+}
+
+.auth-link:hover {
+	color: #9fd311;
+}
+
+/*===========Style for mobile menu==============*/
+.burger-link {
+	display: none;
+	position: absolute;
+	top: 3%;
+	right: 10%;
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	border: 2px solid #9fd311;
+	background: #fff;
+	z-index: 100;
+}
+
+.burger-link span, .burger-link span:before, .burger-link span:after {
+	display: block;
+	height: 2px;
+	width: 18px;
+	background-color: #333;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -9px;
+	margin-top: 0;
+}
+
+.burger-link span:before {
+	transition: all .3s;
+	margin-top: -6px;
+	content: '';
+}
+
+.burger-link span:after {
+	transition: all .3s;
+	margin-top: 4px;
+	content: '';
+}
+
+.burger-link_active span:before {
+	transform: rotate(45deg);
+	margin-top: 0;
+}
+
+.burger-link_active span:after {
+	transform: rotate(-45deg);
+	margin-top: 0;
+}
+
+.burger-link_active span {
+	background: transparent;
+}
+
+.mobile-nav {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	background: #9fd311;
+	transition: .5s;
+	z-index: 99;
+	left: -100%;
+}
+
+.nav-active {
+	left: 0;
+}
+
+.mobile-menu {
+	list-style: none;
+	text-align: center;
+}
+
+.menu-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px auto;
+}
+
+.menu-link {
+	color: #fff;
+	font-size: 20px;
+	letter-spacing: 5px;
+	text-decoration: none;
+	z-index: 1;
+}
+
+
+/*=====================Style for sign-block=====================*/
+.sign-block {
+	position: absolute;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background: rgba(33, 33, 33, .2);
+	z-index: 200;
+	box-sizing: border-box;
+}
+
+.sign-block_active {
+	display: flex;
+}
+
+.sign {
+	background: #fff;
+	width: 350px;
+	height: 400px;
+	border-radius: 20px;
+}
+
+.exit {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	color: #000;
+	font-size: 20px;
+	width: 30px;
+	height: 30px;
+	border-radius: 0 20px 0 20px;
+	position: relative;
+	left: 320px;
+	background: rgba(114, 114, 114, .15);
+	transition: .3s;
+}
+
+.exit:hover {
+	background: #9fd311;
+	color: #fff;
+}
+
+.sign-head {
+	font-size: 35px;
+	margin: 10px 0;
+	padding: 0;
+	text-align: center;
+	user-select: none;
+}
+
+.input-data, .input-btn {
+	width: 70%;
+	margin: 25px auto;
+}
+
+.input-data input {
+	width: 100%;
+	border: 2px solid rgba(114, 114, 114, .5);
+	border-radius: 15px;
+	outline: none;
+	font-size: 18px;
+	font-family: 'PT Sans', sans-serif;
+	transition: .3s;
+	height: 25px;
+	text-align: center;
+}
+
+.input-data input:focus {
+	border: 2px solid #9fd311;
+	color: #9fd311;
+}
+
+.input-btn input{
+	width: 100%;
+	border: 2px solid #9fd311;
+	font-size: 16px;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 20px;
+	background: #9fd311;
+	padding: 6px 0;
+	transition: .3s;
+}
+
+.input-btn input:hover {
+	background: #fff;
+	color: #9fd311;
+}
+
+.notReg {
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	user-select: none;
+}
+
+.notReg-btn input {
+	background: #fff;
+	color: #9fd311;
+}
+
+.notReg-btn input:hover {
+	background: #9fd311;
+	color: #fff;
+}
+
+/*=====================Style for main-information===============*/
+.main-information {
+	position: absolute;
+	top: 20%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 60%;
+	width: 100%;
+}
+
+.text-inform h1 {
+	color: #000;
+	font-size: 70px;
+	margin: 0;
+	padding: 0;
+}
+
+.text-inform strong {
+	color: #9fd311;
+	text-decoration: underline;
+}
+
+.tagline {
+	color: #6f6f6f;
+	font-size: 20px;
+	margin: 10px 0;
+	padding: 0;
+}
+
+.inform-link {
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 70%;
+}
+
+.inform-btn {
+	border: 2px solid #9fd311;
+	border-radius: 20px;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 3px 15px;
+	transition: .3s;
+}
+
+.read {
+	color: #9fd311;
+}
+
+.read:hover {
+	color: #fff;
+	background: #9fd311;
+}
+
+.shop {
+	color: #fff;
+	background: #9fd311;
+}
+
+.shop:hover {
+	color: #9fd311;
+	background: #fff;
+}
+
+/*=====================Style for social=========================*/
+.social {
+	left: 7%;
+	position: absolute;
+	bottom: 3%;
+	width: 86%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.find a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #9fd311;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 16px;
+	transition: .3s;
+}
+
+.find a:hover {
+	color: #6f6f6f;
+}
+
+.find i {
+	padding: 0 5px;
+	font-size: 20px;
+	margin-top: -5px;
+	animation: place 1s infinite;
+	animation-timing-function: linear;
+}
+
+.connect {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-size: 16px;
+	font-weight: lighter;
+	text-align: right;
+}
+
+.social-icon {
+	display: flex;
+	align-items: center;
+	list-style: none;
+}
+
+.social-link {
+	color: #fff;
+	font-size: 20px;
+	transition: .3s;
+}
+
+.social-link:hover {
+	color: #000;
+}
+
+.social-link i {
+	padding-left: 20px;
+}
+
+@keyframes place {
+	0% {
+		margin-top: -5px;
+	}
+
+	50% {
+		margin-top: 5px;
+	}
+
+	100% {
+		margin-top: -5px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.photo-model {
+		max-width: 50%;
+	}
+
+	.photo-model img {
+		width: 100%;
+	}
+
+	.nav-menu {
+		display: none;
+	}
+
+	.personal-item {
+		display: none;
+	}
+
+	.logo {
+		width: 20%;
+	}
+
+	.search-block {
+		width: 60%;
+	}
+
+	.burger-link {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	body {
+		background: #fff;
+	}
+
+	.search-btn {
+		font-size: 15px;
+	}
+
+	.main-information {
+		flex-direction: column;
+	}
+
+	.photo-model {
+		max-width: 60%;
+	}
+
+	.text-inform h1 {
+		text-align: center;
+		font-size: 45px;
+	}
+
+	.tagline {
+		text-align: center;
+		font-size: 14px;
+	}
+
+	.inform-link {
+		width: 100%;
+		justify-content: center;
+	}
+
+	.inform-btn {
+		margin: 0 10px;
+		font-size: 14px;
+	}
+
+	.connect {
+		color: #000;
+		font-size: 15px;
+	}
+
+	.social-link {
+		color: #000;
+		font-size: 15px;
+	}
+
+	.social-link:hover {
+		color: #9fd311;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.text-inform h1 {
+		font-size: 40px;
+	}
+
+	.search-form {
+		width: 80%;
+	}
+
+	.search-btn {
+		width: 20%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.logotype {
+		max-width: 40px;
+	}
+
+	.search-form {
+		height: 20px;
+	}
+
+	.search-btn {
+		font-size: 12px;
+	}
+
+	.text-inform h1 {
+		font-size: 30px;
+	}
+
+	.inform-btn {
+		margin: 0 10px;
+		font-size: 12px;
+	}
+
+	.find a {
+		font-size: 12px;
+	}
+
+	.find i {
+		font-size: 14px;
+	}
+
+	.social-link {
+		padding-left: 0px;
+	}
+
+	.burger-link {
+		top: 2%;
+	}
+}
+
+@media screen and (max-height: 650px) {
+	body {
+		height: 120vh;
+	}
+
+	.main-information {
+		top: 30%;
+	}
+
+	.social {
+		top: 110%;
+	}
+
+	.sign {
+		width: 300px;
+	}
+
+	.exit {
+		left: 270px;
+	}
+}
+
+@media screen and (max-height: 500px) and (max-width: 1000px) {
+	body {
+		height: 180vh;
+	}
+
+	.main-information {
+		top: 70%;
+	}
+
+	.social {
+		top: 180%;
+	}
+}
+
+/*====================Style for card======================*/
+.card {
+	width: 225px;
+	min-height: 350px;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	/* Размещаем элементы в колонку */
+	border-radius: 4px;
+	transition: 0.2s;
+	position: relative;
+
+
+}
+
+/* При наведении на карточку - меняем цвет тени */
+.card:hover {
+	box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
+}
+
+.card__top {
+	flex: 0 0 220px;
+		/* Задаем высоту 220px, запрещаем расширение и сужение по высоте */
+		position: relative;
+		overflow: hidden;
+		/* Скрываем, что выходит за пределы */
+		
+}
+
+/* Контейнер для картинки */
+.card__image {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+
+
+}
+
+.card__image>img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	/* Встраиваем картинку в контейнер card__image */
+	transition: 0.3s;
+}
+
+/* При наведении - увеличиваем картинку */
+.card__image:hover>img {
+	transform: scale(1.1);
+}
+
+/* Размещаем скидку на товар относительно изображения */
+.card__label {
+	padding: 4px 8px;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	background: #ff6633;
+	border-radius: 4px;
+	font-weight: 400;
+	font-size: 16px;
+	color: #fff;
+}
+
+.card__bottom {
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 auto;
+	/* Занимаем всю оставшуюся высоту карточки */
+	padding: 20px;
+}
+
+.card__prices {
+	display: flex;
+	margin-bottom: 10px;
+	flex: 0 0 50%;
+	/* Размещаем цены равномерно в две колонки */
+}
+
+.card__price::after {
+	content: "₽";
+	margin-left: 4px;
+	position: relative;
+}
+
+.card__price--discount {
+	font-weight: 700;
+	font-size: 19px;
+	color: #414141;
+	display: flex;
+	flex-wrap: wrap-reverse;
+}
+
+.card__price--discount::before {
+	content: "Со скидкой";
+	font-weight: 400;
+	font-size: 13px;
+	color: #bfbfbf;
+}
+
+.card__price--common {
+	font-weight: 400;
+	font-size: 17px;
+	color: #606060;
+	display: flex;
+	flex-wrap: wrap-reverse;
+	justify-content: flex-end;
+}
+
+.card__price--common::before {
+	content: "Обычная";
+	font-weight: 400;
+	font-size: 13px;
+	color: #bfbfbf;
+}
+
+.card__title {
+	display: block;
+	margin-bottom: 10px;
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 150%;
+	color: #414141;
+}
+
+.card__title:hover {
+	color: #ff6633;
+}
+
+.card__add {
+	display: block;
+	width: 100%;
+	font-weight: 400;
+	font-size: 17px;
+	color: #70c05b;
+	padding: 20px;
+	text-align: center;
+	border: 1px solid #70c05b;
+	border-radius: 4px;
+	cursor: pointer;
+	/* Меняем курсор при наведении */
+	transition: 0.2s;
+	margin-top: auto;
+	/* Прижимаем кнопку к низу карточки */
+}
+
+.card__add:hover {
+	border: 1px solid #ff6633;
+	background-color: #ff6633;
+	color: #fff;
+}
+
